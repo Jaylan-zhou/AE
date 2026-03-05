@@ -1,0 +1,34 @@
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# 数据集（体积过大，需自行下载）
+img_align_celeba/
+
+# 训练输出
+outputs/
+
+# 系统文件
+.DS_Store
+*.swp
+*.swo
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Claude/OpenSpec（可选保留）
+.claude/settings.local.json
