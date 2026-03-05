@@ -34,8 +34,8 @@ def load_model(checkpoint_path, device):
     if 'model_state_dict' in checkpoint:
         # 尝试从模型状态推断
         state_dict = checkpoint['model_state_dict']
-        # 从编码器全连接层推断潜在维度
-        latent_dim = state_dict['encoder.fc.weight'].shape[1]
+        # 从编码器全连接层推断潜在维度 (weight shape: (latent_dim, 4096))
+        latent_dim = state_dict['encoder.fc.weight'].shape[0]
     else:
         latent_dim = 100  # 默认值
 
